@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @EnableWebMvc // <mvc:annotation-driven />
 @Configuration
-@ComponentScan({ "com.versus.oxxxy" })
+@ComponentScan({ "com.versus.oxxxy.controller" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
