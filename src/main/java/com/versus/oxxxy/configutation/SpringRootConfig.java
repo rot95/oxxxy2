@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @author rot95
  */
 @Configuration
-@ComponentScan({ "com.versus.oxxxy.service" })
+//@ComponentScan({ "com.versus.oxxxy.service" })
 public class SpringRootConfig {
 }
