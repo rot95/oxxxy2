@@ -25,13 +25,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public User findById(int id) {
+	public User findById(long id) {
 		return userRepository.findOne(id);
 	}
 
 	@Override
 	@Transactional(rollbackFor = UserNotFound.class)
-	public User delete(int id) throws UserNotFound {
+	public User delete(long id) throws UserNotFound {
 		User deletedShop = userRepository.findOne(id);
 
 		if (deletedShop == null)
@@ -50,17 +50,16 @@ public class UserServiceImpl implements UserService {
 	@Override
 	@Transactional(rollbackFor = UserNotFound.class)
 	public User update(User user) throws UserNotFound {
-		User updatedUser = userRepository.findOne(user.getId());
+		User updatedUser = userRepository.findOne(user.getUserId());
 
 		if (updatedUser == null)
 			throw new UserNotFound();
 
-		updatedUser.setNick_name(user.getNick_name());
-		updatedUser.setFirst_name(user.getFirst_name());
-		updatedUser.setLast_name(user.getLast_name());
-		updatedUser.setE_mail(user.getE_mail());
+		updatedUser.setNickName(user.getNickName());
+		updatedUser.setFirstName(user.getFirstName());
+		updatedUser.setLastName(user.getLastName());
+		updatedUser.setEmail(user.getEmail());
 		updatedUser.setPassword(user.getPassword());
 		return updatedUser;
 	}
-
 }

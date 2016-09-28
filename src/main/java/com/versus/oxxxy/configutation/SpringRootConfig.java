@@ -1,6 +1,5 @@
 package com.versus.oxxxy.configutation;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,6 +8,5 @@ import org.springframework.context.annotation.Configuration;
  * @author rot95
  */
 @Configuration
-//@ComponentScan({ "com.versus.oxxxy.service" })
 public class SpringRootConfig {
 }

@@ -9,70 +9,72 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user")
 public class User {
+	
 	@Id
 	@GeneratedValue
-	private Integer id;
+	private Long userId;
 
 	@Column(name = "nick_name")
-	private String nick_name;
+	private String nickName;
 
 	@Column(name = "first_name")
-	private String first_name;
+	private String firstName;
 
 	@Column(name = "last_name")
-	private String last_name;
+	private String lastName;
 
-	@Column(name = "e-mail")
-	private String e_mail;
+	@Column(name = "email")
+	private String email;
 
 	@Column(name = "password")
 	private String password;
 
-	public Integer getId() {
-		return id;
+	public final Long getUserId() {
+		return userId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public final void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public String getNick_name() {
-		return nick_name;
+	public final String getNickName() {
+		return nickName;
 	}
 
-	public void setNick_name(String nick_name) {
-		this.nick_name = nick_name;
+	public final void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public final String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public final void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public final String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public final void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getE_mail() {
-		return e_mail;
+	public final String getEmail() {
+		return email;
 	}
 
-	public void setE_mail(String e_mail) {
-		this.e_mail = e_mail;
+	public final void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getPassword() {
+	public final String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public final void setPassword(String password) {
 		this.password = password;
 	}
+
 }

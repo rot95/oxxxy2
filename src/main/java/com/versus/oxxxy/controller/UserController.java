@@ -32,7 +32,7 @@ public class UserController {
 	public ModelAndView createNewUser(@ModelAttribute User user, final RedirectAttributes redirectAttributes) {
 
 		ModelAndView mav = new ModelAndView();
-		String message = "New user " + user.getFirst_name() + " " + user.getLast_name() + " was successfully created.";
+		String message = "New user " + user.getFirstName() + " " + user.getLastName() + " was successfully created.";
 
 		userService.create(user);
 		mav.setViewName("redirect:/index.html");
@@ -77,7 +77,7 @@ public class UserController {
 		ModelAndView mav = new ModelAndView("redirect:/index.html");
 
 		User user = userService.delete(id);
-		String message = "The user " + user.getFirst_name() + " " + user.getLast_name() + " was successfully deleted.";
+		String message = "The user " + user.getFirstName() + " " + user.getLastName() + " was successfully deleted.";
 
 		redirectAttributes.addFlashAttribute("message", message);
 		return mav;
