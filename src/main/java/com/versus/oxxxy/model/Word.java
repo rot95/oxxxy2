@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "word")
 public class Word {
+	
 	@Id
 	@GeneratedValue
 	private Long wordId;
@@ -37,6 +38,20 @@ public class Word {
 
 	@Column
 	private String desctiption;
+	
+	
+	public Word() {
+	}
+	
+	public Word(String word) {
+		this.word = word;
+	}
+	
+	public Word(String word, Language lang, String type) {
+		this.word = word;
+		this.lang = lang;
+		this.type = type;
+	}
 
 	public final Long getWordId() {
 		return wordId;
