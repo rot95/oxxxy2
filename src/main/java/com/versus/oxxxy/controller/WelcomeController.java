@@ -7,18 +7,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
  
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class WelcomeController {
  
     @RequestMapping(method = RequestMethod.GET)
-    public String sayHello(ModelMap model) {
-        model.addAttribute("greeting", "Hello World from Spring 4 MVC");
-        return "welcome";
+    public String welcome() {
+        return "forward:/static/index.html";
     }
 
     @RequestMapping(value = "/oxxxy", method = RequestMethod.GET)
-    public String sayHelloAgain(ModelMap model) {
+    public String sayHelloOxxxy(ModelMap model) {
         model.addAttribute("greeting", "Hi Oxxxy");
-        return "welcome";
+        return "welcome.jsp";
     }
 
 }
